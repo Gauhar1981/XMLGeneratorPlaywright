@@ -1,0 +1,274 @@
+
+import { fakerEN_US as faker } from "@faker-js/faker"
+export function generateClaimsXml3P1B(data: any, ID: string): string {
+
+  const payment = data.Payments_loop?.[0] ?? {};
+  const paymentsXml = (data.Payments_loop || []).map((payment: any) => `
+    <Payments_loop>
+      <DN0195>${payment.DN0195 ?? ""}</DN0195>
+      <DN0217>${payment.DN0217 ?? ""}</DN0217>
+      <DN0218>${payment.DN0218 ?? ""}</DN0218>
+      <DN0219>${payment.DN0219 ?? ""}</DN0219>
+      <DN0220>${payment.DN0220 ?? ""}</DN0220>
+      <DN0222>${payment.DN0222 ?? ""}</DN0222>
+    </Payments_loop>`.trim()).join('\n');
+  
+  return `<?xml version="1.0" encoding="utf-8"?>
+<Claims>
+  <Info>
+    <Title>${data.info.title}</Title>
+    <FromName>${data.info.fromName}</FromName>
+    <FromFEIN>${faker.string.numeric(9)}</FromFEIN>
+    <FromZIP>${faker.location.zipCode({ state: `${data.general.DN0004}` })}</FromZIP>
+    <Count>${data.info.count}</Count>
+  </Info>
+  <Main>
+    <General>
+      <DN0104>${data.general.DN0104}</DN0104>
+      <IDNumber>${ID}</IDNumber>
+      <DN0004>${data.general.DN0004}</DN0004>
+      <DN0073>${data.general.DN0073}</DN0073>
+      <DN0074>${data.general.DN0074}</DN0074>
+      <!-- <DN0431>NT</DN0431> -->
+    </General>
+    <Injury>
+      <DN0002></DN0002>
+      <DN0031>${data.injury.DN0031}</DN0031>
+      <DN0032>${data.injury.DN0032}</DN0032>
+      <DN0033>37334 </DN0033> 
+      <DN0035>40</DN0035>
+      <DN0038>${data.injury.DN0038}</DN0038>
+      <DN0039>3</DN0039>
+      <DN0054>M</DN0054>
+      <DN0055>1</DN0055>
+      <DN0056>20250514</DN0056> 
+      <DN0059>2883</DN0059> 
+      <DN0060>Cabinet Installer</DN0060>
+      <DN0065>20250512</DN0065> 
+      <DN0068>20250512</DN0068> 
+      <DN0070>20250512</DN0070> 
+      <DN0118>LINCOLN</DN0118> 
+      <DN0120>CLIENT'S HOME</DN0120>
+      <DN0121>Fayetteville</DN0121> 
+      <DN0122>20 Bridlewood Drive</DN0122> 
+      <DN0123>TN</DN0123> 
+      <DN0144>20250515</DN0144>
+      <DN0145>20250516</DN0145>
+      <DN0146>N</DN0146>
+      <DN0249>X</DN0249>
+      <DN0290>01</DN0290>
+      <DN0297>20250512</DN0297>
+      <DN0403>A</DN0403>
+      <DN0404>N</DN0404>
+      <DN0405>Y</DN0405>
+    </Injury>
+    <ClaimAdmin>
+    <!-- <DN0005>TNPP20231201T01</DN0005> -->
+    <DN0010>P O BOX 600</DN0010>
+    <DN0012>GAINESVILLE</DN0012>
+    <DN0013>GA</DN0013>
+    <DN0014>305030600</DN0014>
+    <DN0015>TNSS20260116T07</DN0015>
+    <DN0041>20250512</DN0041> <DN0136>US</DN0136>
+    <DN0137>8008632181</DN0137>
+    <DN0138>${faker.internet.email()}</DN0138>
+    <DN0140>VICTORIA,,MCCOY</DN0140> <DN0187>591683711</DN0187>
+    <DN0188>SUMMIT CONSULTING, INCORPORATED</DN0188>
+    <DN0200>30501</DN0200> <DN0298>20250515</DN0298>
+    <DN0417>20250515</DN0417>
+    </ClaimAdmin>
+    <Employee>
+      <DN0042>${data.employee.DN0042}</DN0042>
+      <DN0043>${data.employee.DN0043}</DN0043>
+      <DN0044>${data.employee.DN0044}</DN0044>
+      <DN0045>CASON</DN0045>
+      <DN0046>107 Tacon Dr</DN0046>
+      <DN0048>Hazel Green</DN0048>
+      <DN0049>AL</DN0049>
+      <DN0050>357509183</DN0050>
+      <DN0051>2569752647</DN0051>
+      <DN0052>19920730</DN0052>
+      <DN0053>M</DN0053>
+      <DN0057>20250514</DN0057>
+      <DN0058>2</DN0058>
+      <DN0061>20150101</DN0061>
+      <DN0064>5</DN0064>
+      <DN0151>00</DN0151>
+      <DN0155>US</DN0155>
+      <DN0255>II</DN0255>
+      <DN0270>S</DN0270>
+    </Employee>
+    <Employer>
+    <DN0016>262827366</DN0016>
+    <DN0018>H &amp; S Cabinet Shop</DN0018>
+    <DN0019>15 Airport Rd</DN0019>
+    <DN0021>Fayetteville</DN0021>
+    <DN0022>TN</DN0022>
+    <DN0023>373346671</DN0023>
+    <DN0025>321999</DN0025>
+    <DN0040>20250512</DN0040> 
+    <DN0159>9314380710</DN0159>
+    <DN0160>${faker.person.fullName()}</DN0160>
+    <DN0164>US</DN0164>
+    <DN0165>Fayetteville</DN0165>
+    <DN0166>US</DN0166>
+    <DN0167>373346671</DN0167>
+    <DN0168>15 Airport Rd</DN0168>
+    <DN0170>TN</DN0170>
+    <DN0273>Y</DN0273>
+    <DN0416>20250515</DN0416>
+    </Employer>
+    <Insurer>
+    <DN0006>593269531</DN0006>
+    <DN0007>Bridgefield Casualty Insurance Company</DN0007>
+    <DN0185>I</DN0185>
+    </Insurer>
+    <Insured>
+    <DN0017>H &amp; S Cabinet Shop</DN0017>
+    <DN0024>N</DN0024>
+    <DN0314>262827366</DN0314>
+    <DN0028>0196391530</DN0028>
+    <DN0029>20150526</DN0029>
+    <DN0030>20160526</DN0030>
+    <DN0184>I</DN0184>
+    </Insured>
+    <!-- <Denial_no_loop> -->
+    <!-- <DN0196>20240512</DN0196> -->
+    <!-- <DN0197>employee did not suffer a work-related injury.</DN0197> -->
+    <!-- <DN0199>20240514</DN0199> -->
+    <!-- <DN0294>A</DN0294> -->
+    <!-- <DN0436>20191021</DN0436> -->
+    <!-- </Denial_no_loop> -->
+    <Payments_no_loop>
+    <DN0293>AS</DN0293
+    <DN0299>20250512</DN0299>
+    <!-- </Payments_no_loop> -->
+    <!-- <Payments_no_loop> -->
+    <!-- </Payments_no_loop> -->
+    <!-- <Suspension> -->
+    <!-- <DN0193>20240516</DN0193> -->
+    <!-- <DN0233>Ya</DN0233> -->
+    <!-- <DN0418>S1</DN0418> -->
+    <!-- <DN0419></DN0419> -->
+    <!-- </Suspension> -->
+    <Wage>
+    <DN0062>${faker.number.float({ min: 100, max: 999, fractionDigits: 2 })}</DN0062>
+    <DN0063>1</DN0063>
+    <DN0066>Y</DN0066>
+    <DN0134>${faker.number.float({ min: 100, max: 999, fractionDigits: 2 })}</DN0134>
+    <DN0202>R</DN0202>
+    <DN0256>20250512</DN0256>
+    <DN0286>${faker.number.float({ min: 100, max: 999, fractionDigits: 2 })}</DN0286>
+    </Wage>
+    <Loops>     
+    <Benefits>
+    <Status>AS</Status>
+    <DN0085>500</DN0085>
+    <DN0086>608</DN0086>
+    <DN0087>609.40</DN0087>
+    <DN0088>20240528</DN0088>
+    <<DN0089>20240529</DN0089>
+    <DN0090>0</DN0090>
+    <DN0091>6</DN0091>
+    <DN0174>607.40</DN0174>
+    <DN0175>20240529</DN0175>
+    <DN0192>20240529</DN0192>
+    <DN0211>20240529</DN0211>
+    </Benefits>
+    <!-- <Benefits> -->
+    <!-- <Status>AS</Status> -->
+    <!-- <DN0085>010</DN0085> -->
+    <!-- <DN0086>608</DN0086> -->
+    <!-- <DN0087>609.40</DN0087> -->
+    <!-- <DN0088>20240528</DN0088> -->
+    <!-- <DN0089>20240529</DN0089> -->
+    <!-- <DN0090>0</DN0090> -->
+    <!-- <DN0091>6</DN0091> -->
+    <!-- <DN0174>607.40</DN0174> -->
+    <!-- <DN0175>20240529</DN0175> -->
+    <!-- <DN0192>20240529</DN0192> -->
+    <!-- <DN0211>20240529</DN0211> -->
+    <!-- </Benefits> -->
+    <!-- <Benefits> -->
+    <!-- <Status>AS</Status> -->
+    <!-- <DN0085>010</DN0085> -->
+    <!-- <DN0086>608</DN0086> -->
+    <!-- <DN0087>609.40</DN0087> -->
+    <!-- <DN0088>20240529</DN0088> -->
+    <!-- <DN0089>20240529</DN0089> -->
+    <!-- <DN0090>0</DN0090> -->
+    <!-- <DN0091>6</DN0091> -->
+    <!-- <DN0174>607.40</DN0174> -->
+    <!-- <DN0175>20240529</DN0175> -->
+    <!-- <DN0192>20240529</DN0192> -->
+    <!-- <DN0211>20240529</DN0211> -->
+    <!-- </Benefits> -->
+    <!-- <Benefits> -->
+    <!-- <Status>AS</Status> -->
+    <!-- <DN0085>020</DN0085> -->
+    <!-- <DN0086>608</DN0086> -->
+    <!-- <DN0087>609.40</DN0087> -->
+    <!-- <DN0088>20230226</DN0088> -->
+    <!-- <DN0089>20230227</DN0089> -->
+    <!-- <DN0090>0</DN0090> -->
+    <!-- <DN0091>6</DN0091> -->
+    <!-- <DN0174>607.40</DN0174> -->
+    <!-- <DN0175>20230124</DN0175> -->
+    <!-- <DN0192>20230126</DN0192> -->
+    <!-- <DN0211>20230127</DN0211> -->
+    <!-- </Benefits> -->
+    <BenefitsOther>
+    <DN0215>${faker.number.float({ min: 100, max: 999, fractionDigits: 2 })}</DN0215>
+    <DN0216>${faker.number.int({ min: 100, max: 999 })}</DN0216>
+    </BenefitsOther>
+    <!-- <BenefitsOther> -->
+    <!-- <DN0215>317.11</DN0215> -->
+    <!-- <DN0216>360</DN0216> -->
+    <!-- </BenefitsOther> -->
+    <!-- <Denial_loop> -->
+    <!-- <DN0198>3D</DN0198> -->
+    <!-- </Denial_loop> -->
+    <!-- <Denial_loop> -->
+    <!-- <DN0198>1A</DN0198> -->
+    <!-- </Denial_loop> -->
+    <!-- <Denial_loop> -->
+    <!-- <DN0198>2B</DN0198> -->
+    <!-- </Denial_loop> -->
+    <Part_of_Body_Injured>
+    <DN0036>${faker.number.int({ min: 10, max: 99 })}</DN0036>
+    <DN0421>R</DN0421>
+    <DN0422>2</DN0422>
+    </Part_of_Body_Injured>
+    ${paymentsXml}
+    <!-- <Payments_loop> -->
+    <!-- <DN0195>20230119</DN0195> -->
+    <!-- <DN0217>Barnum Clinton</DN0217> -->
+    <!-- <DN0218>250.00</DN0218> -->
+    <!-- <DN0219>20230224</DN0219> -->
+    <!-- <DN0220>20230225</DN0220> -->
+    <!-- <DN0222>500</DN0222> -->
+    <!-- </Payments_loop> -->
+    <!-- <Payments_loop> -->
+    <!-- <DN0195>20230119</DN0195> -->
+    <!-- <DN0217>Barnum Clinton</DN0217> -->
+    <!-- <DN0218>240.00</DN0218> -->
+    <!-- <DN0219>20230226</DN0219> -->
+    <!-- <DN0220>20230227</DN0220> -->
+    <!-- <DN0222>020</DN0222> -->
+    <!-- </Payments_loop> -->
+    <!-- <Payments_loop> -->
+    <!-- <DN0195>20160119</DN0195> -->
+    <!-- <DN0217>MARK A MURPHY</DN0217> -->
+    <!-- <DN0218>139.20</DN0218> -->
+    <!-- <DN0219>20151117</DN0219> -->
+    <!-- <DN0220>20151117</DN0220> -->
+    <!-- <DN0222>350</DN0222> -->
+    <!-- </Payments_loop> -->
+    <PermanentImpairments>
+    <DN0083>${faker.number.int({ min: 10, max: 99 })}</DN0083>
+    <DN0084>1</DN0084>
+    </PermanentImpairments>
+    </Loops>
+  </Main>
+</Claims>`;
+}
