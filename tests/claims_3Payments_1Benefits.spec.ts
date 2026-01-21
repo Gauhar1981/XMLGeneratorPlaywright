@@ -5,7 +5,7 @@ import fs from "fs"
 
 const jsonfile="testData/claims3P1B.json"
 
-test("Generate multiple Claims XML files from JSON for 3 Payments and 1 Benefit", async () => {
+test("Generate multiple Claims XML files from JSON for 3 Payments and 1 Benefit @sanity", async () => {
     generateXML("testData/claims3P1B.json");
      expect(fs.readdirSync("output/claims").length).toBeGreaterThan(0);
     console.log("All XMLs generated successfully")  
