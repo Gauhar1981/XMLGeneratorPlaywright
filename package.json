@@ -12,8 +12,9 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.9",
+    "allure-playwright": "^3.4.5",
     "webpack": "^5.x.x",
-  "webpack-cli": "^5.x.x"
+    "webpack-cli": "^5.x.x"
   },
   "dependencies": {
     "@faker-js/faker": "^10.2.0"

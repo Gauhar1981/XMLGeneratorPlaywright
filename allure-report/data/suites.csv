@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7","Generate multiple Claims XML files from JSON for 3 Payments and 1 Benefit @sanity","chromium","2026-01-21","passed","2026-01-21","","claims_3Payments_1Benefits.spec.ts","",""
+"","25","Generate multiple Claims XML files from JSON for 2 Payments and 2 Benefits @sanity","chromium","2026-01-21","passed","2026-01-21","","claims_2Payments_2Benefits.spec.ts","",""

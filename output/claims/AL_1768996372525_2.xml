@@ -3,14 +3,14 @@
   <Info>
     <Title>Raw Data Feed</Title>
     <FromName>FIG</FromName>
-    <FromFEIN>274843657</FromFEIN>
-    <FromZIP>35635</FromZIP>
+    <FromFEIN>983850205</FromFEIN>
+    <FromZIP>35242</FromZIP>
     <Count>1</Count>
   </Info>
   <Main>
     <General>
       <DN0104>T</DN0104>
-      <IDNumber>1768988561902_2</IDNumber>
+      <IDNumber>1768996372525_2</IDNumber>
       <DN0004>AL</DN0004>
       <DN0073>O</DN0073>
       <DN0074>I</DN0074>
@@ -56,7 +56,7 @@
     <DN0015>TNSS20260116T07</DN0015>
     <DN0041>20250512</DN0041> <DN0136>US</DN0136>
     <DN0137>8008632181</DN0137>
-    <DN0138>Wilma8@yahoo.com</DN0138>
+    <DN0138>Marilou99@gmail.com</DN0138>
     <DN0140>VICTORIA,,MCCOY</DN0140> <DN0187>591683711</DN0187>
     <DN0188>SUMMIT CONSULTING, INCORPORATED</DN0188>
     <DN0200>30501</DN0200> <DN0298>20250515</DN0298>
@@ -93,7 +93,7 @@
     <DN0025>321999</DN0025>
     <DN0040>20250512</DN0040> 
     <DN0159>9314380710</DN0159>
-    <DN0160>Bob Hessel III</DN0160>
+    <DN0160>Juana Fadel</DN0160>
     <DN0164>US</DN0164>
     <DN0165>Fayetteville</DN0165>
     <DN0166>US</DN0166>
@@ -125,9 +125,8 @@
     <!-- <DN0436>20191021</DN0436> -->
     <!-- </Denial_no_loop> -->
     <Payments_no_loop>
-    <DN0293>AS</DN0293>
+    <DN0293>AS</DN0293
     <DN0299>20250512</DN0299>
-    </Payments_no_loop>
     <!-- </Payments_no_loop> -->
     <!-- <Payments_no_loop> -->
     <!-- </Payments_no_loop> -->
@@ -138,57 +137,29 @@
     <!-- <DN0419></DN0419> -->
     <!-- </Suspension> -->
     <Wage>
-    <DN0062>761.62</DN0062>
+    <DN0062>511.23</DN0062>
     <DN0063>1</DN0063>
     <DN0066>Y</DN0066>
-    <DN0134>496.71</DN0134>
+    <DN0134>456.25</DN0134>
     <DN0202>R</DN0202>
     <DN0256>20250512</DN0256>
-    <DN0286>311.91</DN0286>
+    <DN0286>158.61</DN0286>
     </Wage>
-    <Loops> 
-    <Benefits> 
+    <Loops>     
+    <Benefits>
     <Status>AS</Status>
-    <DN0085>530</DN0085>
+    <DN0085>500</DN0085>
     <DN0086>608</DN0086>
     <DN0087>609.40</DN0087>
-    <DN0088>20250612</DN0088>
-    <DN0089>20250614</DN0089>
+    <DN0088>20240528</DN0088>
+    <<DN0089>20240529</DN0089>
     <DN0090>0</DN0090>
     <DN0091>6</DN0091>
     <DN0174>607.40</DN0174>
-    <DN0175>20250614</DN0175>
-    <DN0192>20250614</DN0192>
-    <DN0211>20250614</DN0211>
-  </Benefits>
-<Benefits> 
-    <Status>AS</Status>
-    <DN0085>530</DN0085>
-    <DN0086>608</DN0086>
-    <DN0087>609.40</DN0087>
-    <DN0088>20250526</DN0088>
-    <DN0089>20250527</DN0089>
-    <DN0090>0</DN0090>
-    <DN0091>6</DN0091>
-    <DN0174>607.40</DN0174>
-    <DN0175>20250527</DN0175>
-    <DN0192>20250527</DN0192>
-    <DN0211>20250527</DN0211>
-  </Benefits>    
-    <!-- <Benefits> -->
-    <!-- <Status>AS</Status> -->
-    <!-- <DN0085>500</DN0085> -->
-    <!-- <DN0086>608</DN0086> -->
-    <!-- <DN0087>609.40</DN0087> -->
-    <!-- <DN0088>20240528</DN0088> -->
-    <!-- <DN0089>20240529</DN0089> -->
-    <!-- <DN0090>0</DN0090> -->
-    <!-- <DN0091>6</DN0091> -->
-    <!-- <DN0174>607.40</DN0174> -->
-    <!-- <DN0175>20240529</DN0175> -->
-    <!-- <DN0192>20240529</DN0192> -->
-    <!-- <DN0211>20240529</DN0211> -->
-    <!-- </Benefits> -->
+    <DN0175>20240529</DN0175>
+    <DN0192>20240529</DN0192>
+    <DN0211>20240529</DN0211>
+    </Benefits>
     <!-- <Benefits> -->
     <!-- <Status>AS</Status> -->
     <!-- <DN0085>010</DN0085> -->
@@ -232,8 +203,8 @@
     <!-- <DN0211>20230127</DN0211> -->
     <!-- </Benefits> -->
     <BenefitsOther>
-    <DN0215>842.79</DN0215>
-    <DN0216>869</DN0216>
+    <DN0215>327.84</DN0215>
+    <DN0216>501</DN0216>
     </BenefitsOther>
     <!-- <BenefitsOther> -->
     <!-- <DN0215>317.11</DN0215> -->
@@ -249,7 +220,7 @@
     <!-- <DN0198>2B</DN0198> -->
     <!-- </Denial_loop> -->
     <Part_of_Body_Injured>
-    <DN0036>21</DN0036>
+    <DN0036>63</DN0036>
     <DN0421>R</DN0421>
     <DN0422>2</DN0422>
     </Part_of_Body_Injured>
@@ -269,14 +240,14 @@
       <DN0220>20240529</DN0220>
       <DN0222>020</DN0222>
     </Payments_loop>
-    <!-- <Payments_loop> -->
-    <!-- <DN0195>20240529</DN0195> -->
-    <!-- <DN0217>Barnum Clinton</DN0217> -->
-    <!-- <DN0218>250.00</DN0218> -->
-    <!-- <DN0219>20240529</DN0219> -->
-    <!-- <DN0220>20240529</DN0220> -->
-    <!-- <DN0222>500</DN0222> -->
-    <!-- </Payments_loop> -->
+<Payments_loop>
+      <DN0195>20191014</DN0195>
+      <DN0217>Barnum Clinton</DN0217>
+      <DN0218>250.00</DN0218>
+      <DN0219>20240529</DN0219>
+      <DN0220>20240529</DN0220>
+      <DN0222>020</DN0222>
+    </Payments_loop>
     <!-- <Payments_loop> -->
     <!-- <DN0195>20230119</DN0195> -->
     <!-- <DN0217>Barnum Clinton</DN0217> -->
@@ -302,7 +273,7 @@
     <!-- <DN0222>350</DN0222> -->
     <!-- </Payments_loop> -->
     <PermanentImpairments>
-    <DN0083>57</DN0083>
+    <DN0083>48</DN0083>
     <DN0084>1</DN0084>
     </PermanentImpairments>
     </Loops>
