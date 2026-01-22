@@ -1,0 +1,12 @@
+📄 JSON path: D:\XMLGeneratorPlaywright\testData\claims2P2B.json
+📄 Claims count: 3
+📁 Output dir: D:\XMLGeneratorPlaywright\output\claims
+💲 Payments count: 2
+✅ Generated XML: TN_MKMO1769076568206_0.xml
+💲 Payments count: 2
+✅ Generated XML: MO_MKMO1769076568210_1.xml
+💲 Payments count: 2
+✅ Generated XML: AL_MKMO1769076568213_2.xml
+✅ Batch file created: D:\XMLGeneratorPlaywright\output\claims\process-claims.bat
+All XMLs generated successfully
+Batch file created successfully
